@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+    <html suppressContentEditableWarning lang="en">
+      <body  suppressContentEditableWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
