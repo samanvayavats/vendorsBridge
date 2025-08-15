@@ -6,6 +6,10 @@ const productSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
     },
+    store: {
+        type: Schema.Types.ObjectId,
+        ref: "Store"
+    },
     productDescription: {
         type: String,
         required: true

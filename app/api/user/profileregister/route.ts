@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import cloudinary from "@/lib/cloudinary.ts"
 import dbConnect from "@/lib/database.ts";
 import User from "@/models/user.model.ts"
+import Store from "@/models/store.model.ts"
 
 export async function POST(request: NextRequest) {
     try {
@@ -75,7 +76,7 @@ export async function POST(request: NextRequest) {
          if (!avatarFile || !coverImageFile) {
                 return NextResponse.json(
                     { message: "facing some problem to upload the  avatar and coverImage on cloudinary"},
-                   { status: 401}
+                   { status: 501}
                 )}
 
              
@@ -89,8 +90,23 @@ export async function POST(request: NextRequest) {
                 coverImage: coverImageFile.url || '',
                 rating : 0
             },{new : true})
+
+            const store = await Store.create({
+                userName: userName,
+                storeName: storeName,
+                owner : user?._id,
+                mobileNumber: mobileNumber,
+                rating :0
+            }) 
             
-            
+            const createdStore = await Store.findById(store?._id)
+            if (!createdStore) {
+                return NextResponse.json(
+                    {message: "store creation failes"},
+                    {status: 401}
+            )}
+
+
 
             const foundUser = await User.findById(user?._id);
 
