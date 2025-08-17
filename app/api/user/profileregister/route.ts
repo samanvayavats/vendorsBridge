@@ -96,6 +96,7 @@ export async function POST(request: NextRequest) {
                 storeName: storeName,
                 owner : user?._id,
                 mobileNumber: mobileNumber,
+                storeViews:0,
                 rating :0
             }) 
             
