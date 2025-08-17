@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
                 owner : user?._id,
                 mobileNumber: mobileNumber,
                 storeViews:0,
-                rating :0
+                rating :[]
             }) 
             
             const createdStore = await Store.findById(store?._id)

@@ -17,10 +17,10 @@ const storeSchema = new Schema({
         type: Number,
         required: true
     },
-    rating: {
+    rating:[ {
         type: Number,
         required: true
-    },
+    }],
     storeViews: {
         type: Number,
         required: true

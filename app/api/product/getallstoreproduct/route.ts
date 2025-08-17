@@ -10,13 +10,11 @@ export async function GET(request: NextRequest) {
         await dbConnect()
 
         const body = request.nextUrl.searchParams
-        console.log("body : " , body)
+      
 
         const storeId = body.get("storeId") as string
         const skip = parseInt(body.get("skip") || "0", 10);
         const limit = parseInt(body.get("limit") || "10", 10);
-  
-        console.log(storeId , skip , limit)
 
 
         // if (!storeId || !skip || !limit) {
