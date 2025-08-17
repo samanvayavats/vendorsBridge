@@ -21,12 +21,16 @@ const storeSchema = new Schema({
         type: Number,
         required: true
     },
-    comments :[
+    storeViews: {
+        type: Number,
+        required: true
+    },
+    comments: [
         {
-            type : String
+            type: String
         }
     ]
 
-})
+},{timestamps :true})
 
-export default mongoose.models.Store || model('Store' , storeSchema)
+export default mongoose.models.Store || model('Store', storeSchema)
