@@ -1,4 +1,5 @@
 // 'use client'
+import Navbar from '@/components/navbar'
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SessionWrapper from "./component/SessionWrapper";
@@ -26,11 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressContentEditableWarning lang="en">
-      <body  suppressContentEditableWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body suppressContentEditableWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-full bg-main`}
       >
         <SessionWrapper>
-         {children}
+          <main>
+            <Navbar />
+            {children}
+          </main>
         </SessionWrapper>
       </body>
     </html>
