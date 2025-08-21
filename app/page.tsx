@@ -1,6 +1,6 @@
 'use client'
-
 import { useSession, signIn, signOut } from 'next-auth/react';
+import Heading from '@/components/headingandAndImage';
 
 export default function Home() {
   const { data: session } = useSession()
@@ -20,8 +20,8 @@ export default function Home() {
   }
 
   return (
-    <div
-    >
+    <div className='w-auto flex items-center flex-col'>
+    <Heading/>
     {session.user?.email}
       
     </div>
