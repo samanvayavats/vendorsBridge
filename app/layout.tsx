@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar'
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SessionWrapper from "./component/SessionWrapper";
+import Footer from '@/components/footer';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -34,6 +35,7 @@ export default function RootLayout({
           {/* <main> */}
             <Navbar />
             {children}
+            <Footer/>
           {/* </main> */}
         </SessionWrapper>
       </body>

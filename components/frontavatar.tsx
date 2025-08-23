@@ -14,7 +14,7 @@ import {
 
 import { Button } from "./ui/button";
 
-const ForntAvatar = () => {
+const ForntAvatar = ( props : any)  => {
     return (
         <div className="w-full h-full flex flex-col justify-center items-center ">
 
@@ -40,7 +40,11 @@ const ForntAvatar = () => {
                 <HoverCard>
                     <HoverCardTrigger className="font-bold text-xl">Store Name</HoverCardTrigger>
                     <HoverCardContent>
-                        The React Framework – created and maintained by @vercel.
+                        Mobile no. : {props.mobile}
+                        <br />
+                        Description : {props.description}
+                        <br />
+                        Address : {props.ddress}
                     </HoverCardContent>
                 </HoverCard>
                 <div><Button>Visit Store</Button></div>
