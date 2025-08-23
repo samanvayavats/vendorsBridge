@@ -1,7 +1,8 @@
 'use client'
 import { useSession, signIn, signOut } from 'next-auth/react';
 import Heading from '@/components/headingandAndImage';
-
+import { FaStore } from "react-icons/fa";
+import Frontavatar from '@/components/frontavatar';
 export default function Home() {
   const { data: session } = useSession()
 
@@ -20,10 +21,21 @@ export default function Home() {
   }
 
   return (
-    <div className='w-auto flex items-center flex-col'>
-    <Heading/>
-    {session.user?.email}
-      
+    <div className="flex flex-col h-full w-full justify-center items-center">
+      <div className="w-auto flex items-center flex-col">
+        <Heading />
+        {/* {session.user?.email} */}
+      </div>
+
+      <div className="flex items-center my-6 mx-10">
+        <h1 className="text-xl font-bold flex pr-1.5">Shops</h1>
+        <FaStore size={25} />
+      </div>
+
+      <Frontavatar />
+      <Frontavatar />
     </div>
+
+
   );
 }

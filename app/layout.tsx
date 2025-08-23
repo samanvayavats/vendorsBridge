@@ -28,13 +28,13 @@ export default function RootLayout({
   return (
     <html suppressContentEditableWarning lang="en">
       <body 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-full bg-main`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-main`}
       >
         <SessionWrapper>
-          <main>
+          {/* <main> */}
             <Navbar />
             {children}
-          </main>
+          {/* </main> */}
         </SessionWrapper>
       </body>
     </html>

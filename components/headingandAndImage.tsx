@@ -11,11 +11,12 @@ const HeadingAndImage = () => {
       setDisplayed(fullText.slice(0, index + 1))
       index++
       if (index === fullText.length) {
-        clearInterval(interval)
+        // clearInterval(interval)
+        index=0
       }
     }, 100)
 
-    return () => clearInterval(interval)
+    // return () => clearInterval(interval)
   }, [])
 
   return (
