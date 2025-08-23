@@ -16,7 +16,7 @@ import { Button } from "./ui/button";
 
 const ForntAvatar = ( props : any)  => {
     return (
-        <div className="w-full h-full flex flex-col justify-center items-center ">
+        <div className="w-full h-full flex flex-col justify-center items-center mx-2">
 
             <div className="relative w-full max-w-2xl mx-4 mb-20 mt-12">
                 {/* Main Image */}
