@@ -7,13 +7,13 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-
+import Link from "next/link";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <Menubar className="bg-black flex justify-between w-auto px-4 rounded-2xl mb-4">
+      <Menubar className="bg-black flex justify-between w-auto px-4 rounded-2xl mb-2">
         {/* Logo */}
         <MenubarMenu>
           <MenubarTrigger className="text-white font-bold text-lg">
@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 pr-10 text-white">
           <MenubarMenu>
-            <MenubarTrigger>Home</MenubarTrigger>
+            <Link href='/'><MenubarTrigger>Home</MenubarTrigger></Link>
           </MenubarMenu>
           <MenubarMenu>
             <MenubarTrigger>About</MenubarTrigger>

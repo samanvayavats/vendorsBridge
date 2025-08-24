@@ -20,7 +20,7 @@ const HeadingAndImage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6">
+    <div className="flex flex-col md:flex-row items-center gap-2">
       <h1 className="text-3xl font-bold">{displayed}</h1>
       <img
         src="/download.png"
