@@ -25,12 +25,12 @@ export async function POST(request: NextRequest) {
         }
 
         // checking if email already exits or not 
-        const isExisted = await User.findOne({ email: email })
+        // const isExisted = await User.findOne({ email: email })
 
 
-        if (isExisted) {
-            return NextResponse.json({ message: "user already exits" }, { status: 401 })
-        }
+        // if (isExisted) {
+        //     return NextResponse.json({ message: "user already exits" }, { status: 401 })
+        // }
 
 
         // add the user with email
