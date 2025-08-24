@@ -27,7 +27,7 @@ export default function Home() {
         {/* {session.user?.email} */}
       </div>
 
-      <div className="flex items-center my-6 mx-10">
+      <div className="flex items-center my-4 mx-10">
         <h1 className="text-xl font-bold flex pr-1.5">Shops</h1>
         <FaStore size={25} />
       </div>
