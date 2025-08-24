@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col h-full w-full justify-center items-center">
+    <div className="flex flex-col h-full w-full justify-center items-center px-2">
       <div className="w-auto flex items-center flex-col">
         <Heading />
         {/* {session.user?.email} */}
