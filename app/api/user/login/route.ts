@@ -6,15 +6,15 @@ interface emailType {
     email: string
 }
 
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
 
     try {
         await dbConnect()
 
         // descturting the email
-        const body = await request.json()
+        const body = request.nextUrl.searchParams
 
-        const { email } = body
+        const email = body.get('email') as string
 
 
         //checkin if the email exits or not
@@ -25,13 +25,12 @@ export async function POST(request: NextRequest) {
         }
 
         // checking if email already exits or not 
-        // const isExisted = await User.findOne({ email: email })
+        const isExisted = await User.findOne({ email: email })
 
 
-        // if (isExisted) {
-        //     return NextResponse.json({ message: "user already exits" }, { status: 401 })
-        // }
-
+        if (isExisted) {
+            return 
+        }
 
         // add the user with email
         const user = await User.create({
