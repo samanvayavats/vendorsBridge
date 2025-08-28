@@ -80,7 +80,8 @@ export async function POST(request: NextRequest) {
                 )}
 
              
-            const user = await User.findOneAndUpdate({email : email},{
+            const user = await User.create({
+                email : email,
                 userName: userName,
                 storeName: storeName,
                 address: address,
@@ -89,7 +90,7 @@ export async function POST(request: NextRequest) {
                 avatar: avatarFile.url || '',
                 coverImage: coverImageFile.url || '',
                 rating : 0
-            },{new : true})
+            })
 
             const store = await Store.create({
                 userName: userName,
