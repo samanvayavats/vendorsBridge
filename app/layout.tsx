@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html suppressContentEditableWarning lang="en">
       <body 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-main`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-main `}
       >
         <SessionWrapper>
           {/* <main> */}
